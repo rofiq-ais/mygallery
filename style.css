@@ -1,0 +1,53 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body{
+    display: grid;
+    grid-template-columns: repeat(1);
+    align-items: center;
+}
+
+.container{
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 50px 8%;
+}
+
+.gallery{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-gap: 30px;
+}
+
+.gallery img{
+    width: 100%;
+    cursor: pointer;
+}
+
+.jumbo{
+    width: 500px;
+    /* height: 100%; */
+    object-fit:cover;
+    /* margin-bottom: 20px; */
+    position: sticky;
+    top: 0;
+    left:50px;
+    right:5%;
+    align-items: center;
+}
+
+.fade{
+    opacity: 0;
+    animation: fadeIn 0.1 forwards;
+}
+
+.active{
+    opacity: 0.5;
+}
